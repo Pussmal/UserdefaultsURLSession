@@ -53,10 +53,15 @@ class ViewController: UIViewController {
     
     private func saveData() {
         let key = SettingsKey.image.rawValue
-        guard let dataImage = dataImage else { return }
+        guard let dataImage = dataImage else {
+            showAlert(title: "Error", message: "add url image for save", handler: nil)
+            return
+        }
         guard let image = UIImage(data: dataImage) else { return }
-        UserDefaults.standard.set(SaveLoadManager.saveImage(image: image), forKey: key)
-        
+        if let nameImage = SaveLoadManager.saveImage(image: image) {
+            UserDefaults.standard.set(nameImage, forKey: key)
+            showAlert(title: "Image Saved", message: nil, handler: nil)
+        }
     }
     
     private func loadData() {

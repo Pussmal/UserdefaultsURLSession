@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="train" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lgL-gI-C8h">
+                                <rect key="frame" x="30" y="64" width="354" height="354"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lgL-gI-C8h" secondAttribute="height" id="RqC-VP-P6Q"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7L-13-hQq">
+                                <rect key="frame" x="30" y="618" width="167" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="E3c-Ie-GkG"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pGC-qM-fJ1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSN-I4-cSD">
+                                <rect key="frame" x="217" y="618" width="167" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Rsa-GW-uxZ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Load"/>
+                                <connections>
+                                    <action selector="loadButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xdy-yP-wlU"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="add url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j91-9c-3CG">
+                                <rect key="frame" x="10" y="428" width="394" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Fg3-j4-dPy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="OJh-a9-NBK"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyw-QY-rnP">
+                                <rect key="frame" x="123.5" y="717" width="167" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="167" id="DlY-W9-jGV"/>
+                                    <constraint firstAttribute="height" constant="80" id="XU2-8h-xBP"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="hUx-6i-82Y"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Show Image"/>
+                                <connections>
+                                    <action selector="showImageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9lZ-mz-45Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LSN-I4-cSD" firstAttribute="centerY" secondItem="G7L-13-hQq" secondAttribute="centerY" id="4VZ-nj-0ZU"/>
+                            <constraint firstItem="j91-9c-3CG" firstAttribute="top" secondItem="lgL-gI-C8h" secondAttribute="bottom" constant="10" id="5nn-fc-q5U"/>
+                            <constraint firstItem="LSN-I4-cSD" firstAttribute="leading" secondItem="G7L-13-hQq" secondAttribute="trailing" constant="20" id="AXY-kg-3E7"/>
+                            <constraint firstItem="j91-9c-3CG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="E94-7f-8gF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lgL-gI-C8h" secondAttribute="trailing" constant="30" id="KjY-AW-rJb"/>
+                            <constraint firstItem="lgL-gI-C8h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NfL-Na-8iE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j91-9c-3CG" secondAttribute="trailing" constant="10" id="Tzq-OI-zV3"/>
+                            <constraint firstItem="hyw-QY-rnP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xq9-F0-9Cu"/>
+                            <constraint firstItem="LSN-I4-cSD" firstAttribute="width" secondItem="G7L-13-hQq" secondAttribute="width" id="YET-hD-kBE"/>
+                            <constraint firstItem="G7L-13-hQq" firstAttribute="top" secondItem="lgL-gI-C8h" secondAttribute="bottom" constant="200" id="a7v-4U-07a"/>
+                            <constraint firstItem="G7L-13-hQq" firstAttribute="leading" secondItem="lgL-gI-C8h" secondAttribute="leading" id="f09-9A-vdw"/>
+                            <constraint firstItem="hyw-QY-rnP" firstAttribute="top" secondItem="G7L-13-hQq" secondAttribute="bottom" constant="19" id="uSS-Ld-ABz"/>
+                            <constraint firstItem="LSN-I4-cSD" firstAttribute="trailing" secondItem="lgL-gI-C8h" secondAttribute="trailing" id="w1J-w0-4Dt"/>
+                            <constraint firstItem="lgL-gI-C8h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="wLy-GD-Fbi"/>
+                            <constraint firstItem="lgL-gI-C8h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="y1b-PU-Pkb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="lgL-gI-C8h" id="bDY-nP-Q0q"/>
+                        <outlet property="mytextField" destination="j91-9c-3CG" id="tXa-v4-hOL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="82.366071428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -5,12 +5,10 @@
 //  Created by Алексей Моторин on 05.07.2022.
 //
 
-import Foundation
 import UIKit
 
 class SaveLoadManager {
     var saveLoadManager = SaveLoadManager()
-    
     
     private init() {}
     

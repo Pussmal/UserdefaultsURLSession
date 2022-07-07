@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QmO-r6-Psh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -17,13 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lgL-gI-C8h">
-                                <rect key="frame" x="30" y="64" width="354" height="354"/>
+                                <rect key="frame" x="30" y="108" width="354" height="354"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lgL-gI-C8h" secondAttribute="height" id="RqC-VP-P6Q"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7L-13-hQq">
-                                <rect key="frame" x="30" y="618" width="167" height="80"/>
+                                <rect key="frame" x="30" y="662" width="167" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="E3c-Ie-GkG"/>
                                 </constraints>
@@ -34,7 +35,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSN-I4-cSD">
-                                <rect key="frame" x="217" y="618" width="167" height="80"/>
+                                <rect key="frame" x="217" y="662" width="167" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Rsa-GW-uxZ"/>
                                 </constraints>
@@ -45,7 +46,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="add url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j91-9c-3CG">
-                                <rect key="frame" x="10" y="428" width="394" height="40"/>
+                                <rect key="frame" x="10" y="472" width="394" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Fg3-j4-dPy"/>
                                 </constraints>
@@ -56,7 +57,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyw-QY-rnP">
-                                <rect key="frame" x="123.5" y="717" width="167" height="80"/>
+                                <rect key="frame" x="123.5" y="761" width="167" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="167" id="DlY-W9-jGV"/>
                                     <constraint firstAttribute="height" constant="80" id="XU2-8h-xBP"/>
@@ -89,12 +90,31 @@
                             <constraint firstItem="lgL-gI-C8h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="y1b-PU-Pkb"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="VYL-9e-vgP"/>
                     <connections>
                         <outlet property="imageView" destination="lgL-gI-C8h" id="bDY-nP-Q0q"/>
                         <outlet property="mytextField" destination="j91-9c-3CG" id="tXa-v4-hOL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="82.366071428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="67A-Ai-orL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QmO-r6-Psh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SXA-o7-udh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="z33-oL-6Kf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbg-mM-HhW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="82.366071428571431"/>
         </scene>
